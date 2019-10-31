@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+    <style>
+body{
+    background-image: url("BackGround.png");
+            background-size: 100%;
+}
+
+        #Coding-block{
+            width:90vw;
+            height:90vh;
+            display:flex;
+            margin:auto;
+            background-color:white;
+            margin:auto;
+        }
+        #Compiler{
+            width:40vw;
+            height:90vh;
+            flex:1;
+            background-color:black;
+            margin:5px;
+            color:white;
+            text-align:center;
+        }
+        #Output-block{
+            width:40vw;
+            height:90vh;
+            margin:5px;
+            flex:1;
+            background-color:black;
+            text-align:center;
+            color:red;
+        }
+
+    </style>
+    <script>
+     function calledOnLoad(){
+        var markers = {
+            "name":"print('hello world from a new project')"
+        }
+
+        
+        $.ajax({
+    type: "POST",
+    url: "http://localhost:3002/",
+    // The key needs to match your method's input parameter (case-sensitive).
+    data: JSON.stringify(markers),
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data){console.log(data);},
+    failure: function(errMsg) {
+        alert(errMsg);
+    }
+});
+     }
+    </script>
+</head>
+<body>
+    <div id="Coding-block">
+        <div id="Compiler">
+            <h2 onclick="calledOnLoad()">Compiler</h2>
+        </div>
+        <div id="Output-block">
+            <h2>Output</h2>
+        </div>
+    </div>
+</body>
+</html>

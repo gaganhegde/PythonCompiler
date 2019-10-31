@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"Gagan",
+            "email":"romessi.hegde@gmail.com"
+
+        },
+        {
+            "id":2,
+            "name":"Hegde",
+            "email":"trigger.hegde@gmail.com"
+
+        },
+        {
+            "id":3,
+            "name":"Chidanand",
+            "email":"finaldestination.com"
+
+        }
+    ]
+}
